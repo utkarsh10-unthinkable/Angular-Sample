@@ -1,0 +1,49 @@
+
+<h1>UTKARSH</h1>
+<app-home></app-home>
+<p>{{name}}</p>
+<h1>{{getName(11)}}</h1>
+<h2>{{employee[1]}}</h2>
+<h2>{{employees.name}}</h2>
+<img src="{{employees.src}}" width="500"><br>
+<input type="button" value="save" (click)="clicksave()" (mouseover)="over()" [disabled]="Isdisabled">
+<input type="text" (change)="txtchange()" [class]="myclass">
+<br>
+<img [attr.src]="src" width="200px">
+<!-- toggle the "special" class on/off with a property -->
+<div [ngClass]="isSpecial ? 'special' : ''">This div is special</div>
+<div [ngClass]="currentClasses">This div is initially saveable, unchanged, and special.</div>
+
+#directive,pipes,services,routing-
+<!--IfElse-->
+<div *ngIf="show;then record else norecord"  ></div>
+<ng-template #record>
+    <div>this is if condition result:{{show}}</div>
+</ng-template>
+<ng-template #norecord>
+    <div>this is else condition result:{{show}}</div>
+</ng-template>
+<!--FORLOOP-->
+<ul>
+    <li *ngFor="let emp of employee;even    as i ">
+       {{i}} {{emp}}
+    </li>
+</ul>
+
+<table>   
+    <tr><td>Name</td>
+    <td>Salary</td></tr>
+    <tr *ngFor="let emp of employeeList">
+        <td>{{emp.name}}</td>
+        <td>{{emp.salary}}</td>
+
+    </tr>
+</table>
+<!--Switch-->
+<div [ngSwitch]="value">
+<div *ngSwitchCase="1">I am First</div>
+<div *ngSwitchCase="2">I am Second</div>
+<div *ngSwitchCase="3">I am Third</div>
+</div>
+<!--Routing-->
+
