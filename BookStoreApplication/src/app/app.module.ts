@@ -7,6 +7,8 @@ import { AuthModule } from './auth/auth.module';
 import { PublicModule } from './public/public.module';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { UserModule } from './user/user.module';
+import { SharedModule } from './shared/shared.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -15,10 +17,12 @@ import { UserModule } from './user/user.module';
   ],
   imports: [
     BrowserModule,
+    //AuthModule,
+    //UserModule,
+    PublicModule,
+    SharedModule,
     AppRoutingModule,
-    AuthModule,
-    UserModule,
-    PublicModule
+    BrowserAnimationsModule
 
   ],
   providers: [],
