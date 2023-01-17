@@ -1,22 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
-import { PublicComponent } from './public.component';
+import { BookComponent } from './Book.component';
 import { AllBooksComponent } from './component/all-books/all-books.component';
 import { BookDetailsComponent } from './component/book-details/book-details.component';
-import { HomeComponent } from './component/home/home.component';
+import { HomeComponent } from '../Public-compnents/home/home.component';
 
 const routes: Routes = [
-  {
-    path:'public',
-    component:PublicComponent,
-    children:[
-       {path:'all-books',component:AllBooksComponent},
-       {path:'book-details/:id',component:BookDetailsComponent},
-       {path:'home',component:HomeComponent}
-
-    ]
-  }
+  { path: 'all-books', component: AllBooksComponent },
+  { path: 'book-details/:id', component: BookDetailsComponent }
+ 
 ];
 
 @NgModule({
