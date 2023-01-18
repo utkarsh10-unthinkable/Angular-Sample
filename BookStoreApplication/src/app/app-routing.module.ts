@@ -11,6 +11,7 @@ import { UserComponent } from './user/user.component';
 const routes: Routes = [
   { path: '', redirectTo: 'Book/all-books', pathMatch: 'full' },
   { path: 'about-us', component: AboutUsComponent },
+  { path: 'home', component: HomeComponent },
   {
     path: 'auth',
     component: AuthComponent,
@@ -34,3 +35,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+ 

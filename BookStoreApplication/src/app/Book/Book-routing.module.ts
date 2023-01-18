@@ -7,7 +7,7 @@ import { BookDetailsComponent } from './component/book-details/book-details.comp
 import { HomeComponent } from '../Public-compnents/home/home.component';
 
 const routes: Routes = [
-  { path: 'all-books', component: AllBooksComponent },
+  { path: 'yup', component: AllBooksComponent },
   { path: 'book-details/:id', component: BookDetailsComponent }
  
 ];

@@ -1,19 +1,16 @@
-<div class="container-fluid bg-dark">
-    <header class="d-flex justify-content-center py-3">
-      <ul class="nav nav-pills">
-        <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Home</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Features</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Pricing</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">FAQs</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">About</a></li>
-      </ul>
-    </header>
-  </div>
+<!-- <p>
+  <mat-toolbar color="primary">
+    <span>My Application</span>
+  </mat-toolbar>
+</p> -->
+<app-toolbar></app-toolbar>
 <div>
+  <a routerLink="/home">Home</a>
     <a routerLink="/about-us">ABOUT</a>
     <a routerLink="/auth/login"[queryParams]="{name:'utkarsh' ,email:email}">LOGIN</a>
     <a routerLink="/auth/signup">SIGNUP</a>
     <a routerLink="/Book/all-books">ALL_BOOKS</a>
     <a routerLink="/Book/book-details/12">BOOKDETAILS</a>
 </div>
-<router-outlet></router-outlet>
+ <router-outlet></router-outlet> 
+ <app-footer></app-footer>
