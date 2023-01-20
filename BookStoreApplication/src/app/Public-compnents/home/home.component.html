@@ -1,1 +1,5 @@
-<p>home works!</p>
+<p>Books</p>
+<p >counter={{(counter.counter)}}</p>
+<button (click)="incCount()">counter++</button>
+<button (click)="decCount()">counter--</button>
+<app-author [data]="counter.counter"[showAuthor]="counter.counter>4 "></app-author>

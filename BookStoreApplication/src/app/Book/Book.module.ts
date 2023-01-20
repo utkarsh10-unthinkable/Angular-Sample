@@ -7,6 +7,7 @@ import { BookComponent } from './Book.component';
 import { PublicRoutingModule } from './Book-routing.module';
 import { BookService } from './services/book.service';
 import {MatCardModule} from '@angular/material/card';
+import { RecentBooksComponent } from './component/recent-books/recent-books.component';
 
 
 
@@ -14,7 +15,8 @@ import {MatCardModule} from '@angular/material/card';
   declarations: [
     AllBooksComponent,
     BookDetailsComponent,
-    BookComponent
+    BookComponent,
+    RecentBooksComponent
   ],
   imports: [
     CommonModule,

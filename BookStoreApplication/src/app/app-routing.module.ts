@@ -18,7 +18,7 @@ const routes: Routes = [
     loadChildren: () => import('./auth/auth.module').then((x) => x.AuthModule)
   },
   {
-    path: 'Book',
+    path: 'book',
     component: BookComponent,
     loadChildren: () => import('./Book/Book.module').then((x) => x.BookModule)
   },

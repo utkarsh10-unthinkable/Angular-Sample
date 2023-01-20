@@ -6,6 +6,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import { FooterComponent } from './component/footer/footer.component';
+import { AuthorComponent } from './component/author/author.component';
 
 
 
@@ -13,7 +14,8 @@ import { FooterComponent } from './component/footer/footer.component';
   declarations: [
     NotFoundComponent,
     ToolbarComponent,
-    FooterComponent
+    FooterComponent,
+    AuthorComponent
   ],
   imports: [
     CommonModule,
@@ -21,6 +23,6 @@ import { FooterComponent } from './component/footer/footer.component';
     MatIconModule,
     MatButtonModule
   ],
-  exports:[ToolbarComponent,FooterComponent]
+  exports:[ToolbarComponent,FooterComponent,AuthorComponent]
 })
 export class SharedModule { }
