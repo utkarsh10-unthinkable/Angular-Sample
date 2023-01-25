@@ -6,10 +6,13 @@ import { Component } from '@angular/core';
   <p>The hero's birthday is {{ birthday | date |lowercase}}</p>
   <p> currenct {{amount| currency:'RUP ':'Rupees'}}</p>
 `,
-  //templateUrl: './app.component.html',
+  templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  ngOnInit(){
+    // this.setCurrentClasses()
+  }
   amount=100
   birthday = new Date(1988, 3, 15);
   title = 'myapplication';
@@ -47,7 +50,7 @@ export class AppComponent {
   txtchange():void{
     this.name="yup"
   }
-  currentClasses: Record<string, boolean> = {};
+  currentClasses:any = null;
 /* . . . */
 setCurrentClasses() {
   // CSS classes: added/removed per current state of component properties
@@ -62,4 +65,5 @@ setCurrentClasses() {
   canSave=true
   show=false
   src="https://images.unsplash.com/photo-1661961111184-11317b40adb2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=80"
+  
 }
