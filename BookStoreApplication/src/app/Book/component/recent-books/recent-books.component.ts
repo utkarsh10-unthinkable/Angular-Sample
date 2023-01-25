@@ -9,7 +9,7 @@ import { BookService } from '../../services/book.service';
 })
 export class RecentBooksComponent implements OnInit{
 
-  public recentbooks:BookModel[];
+  public recentbooks:BookModel[]=[];
   constructor(public recentbookservice:BookService){
     this.recentbooks;
   }

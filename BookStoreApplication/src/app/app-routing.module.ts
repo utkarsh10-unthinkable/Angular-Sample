@@ -9,7 +9,7 @@ import { SharedModule } from './shared/shared.module';
 import { UserComponent } from './user/user.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'Book/all-books', pathMatch: 'full' },
+  { path: '', redirectTo: 'book/yup', pathMatch: 'full' },
   { path: 'about-us', component: AboutUsComponent },
   { path: 'home', component: HomeComponent },
   {

@@ -6,11 +6,13 @@ import { AllBooksComponent } from './component/all-books/all-books.component';
 import { BookDetailsComponent } from './component/book-details/book-details.component';
 import { HomeComponent } from '../Public-compnents/home/home.component';
 import { RecentBooksComponent } from './component/recent-books/recent-books.component';
+import { AddBooksComponent } from './component/add-books/add-books.component';
 
 const routes: Routes = [
   { path: 'yup', component: AllBooksComponent },
   { path: 'book-details/:id', component: BookDetailsComponent },
-  { path: 'recent-book', component: RecentBooksComponent }
+  { path: 'recent-book', component: RecentBooksComponent },
+  {path:'add-book',component:AddBooksComponent}
 
 ];
 
@@ -20,3 +22,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class PublicRoutingModule { }
+

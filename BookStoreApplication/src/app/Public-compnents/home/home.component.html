@@ -2,4 +2,7 @@
 <p >counter={{(counter.counter)}}</p>
 <button (click)="incCount()">counter++</button>
 <button (click)="decCount()">counter--</button>
+<!--using @input parent to child -->
 <app-author [data]="counter.counter"[showAuthor]="counter.counter>4 "></app-author>
+<app-author ></app-author>
+<app-author (myData)="childData($event)"></app-author>

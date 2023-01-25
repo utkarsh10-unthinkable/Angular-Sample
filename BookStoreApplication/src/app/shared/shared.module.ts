@@ -7,6 +7,7 @@ import { MatIconModule } from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import { FooterComponent } from './component/footer/footer.component';
 import { AuthorComponent } from './component/author/author.component';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -21,7 +22,8 @@ import { AuthorComponent } from './component/author/author.component';
     CommonModule,
     MatToolbarModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    RouterModule
   ],
   exports:[ToolbarComponent,FooterComponent,AuthorComponent]
 })

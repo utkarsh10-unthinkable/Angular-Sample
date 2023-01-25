@@ -7,9 +7,8 @@ import { BookModel } from '../models/book.model';
 
 )
 export class BookService {
-  constructor() { }
-  public getBooks():any[]{
-    return [
+
+  private allBooks=[
       {
         "id":1,
         "title":"Angular Fundamental",
@@ -72,7 +71,18 @@ export class BookService {
       }
 
       
-    ]
+    ];
+  
+  constructor(){}
+  public addBook(bookModel:BookModel):void{
+    console.log("hello"+bookModel.title)
+    this.allBooks.push(bookModel);
+    console.log(this.allBooks[6]);
+    console.log(this.allBooks.length);
+
+  }
+  public getBooks():any[]{
+    return this.allBooks;
   }
   public recentBooks():any[]{
     return [

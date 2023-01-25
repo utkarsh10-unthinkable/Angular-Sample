@@ -1,0 +1,9 @@
+<p>Add new Book</p>
+<form #myforms="ngForm" (ngSubmit)="saveBook(myforms.value)">
+    <input type="text" name="Title"  PlaceHolder="Title"ngModel ><br><br>
+    <input type="text" name="Author" PlaceHolder="Author" ngModel ><br><br>
+    <input type="number" name="Page" PlaceHolder="Page" ngModel ><br><br>
+    <input type="number" name="Price" PlaceHolder="Price" ngModel ><br><br>
+    <button type="submit">save</button>
+</form>
+<h2>{{myforms.value|json}}</h2>
