@@ -1,0 +1,49 @@
+<!--Angular form Design Template Drive using reactive Forms-->
+<button mat-raised-button color="primary" >Update Value</button>
+{{addBookForm.get('Title')?.errors|json}}
+<form   (ngSubmit)="saveBook()" [formGroup]="addBookForm" > 
+    <p>
+        <mat-form-field appearance="fill" >
+          <mat-label>Title</mat-label>
+          <input matInput name="Title"  PlaceHolder="Title"  formControlName="Title">
+          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          <mat-hint *ngIf="addBookForm.get('Title')?.errors">Field required</mat-hint>
+        </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field appearance="fill">
+          <mat-label>Author</mat-label>
+          <input matInput name="Author"  PlaceHolder="Title" formControlName="Author" >
+          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field appearance="fill">
+          <mat-label>Page</mat-label>
+          <input matInput name="Page"  PlaceHolder="Title" formControlName="Page">
+          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+
+        </mat-form-field>
+    </p>
+    <div formGroupName="price">
+    <p>
+        <mat-form-field appearance="fill">
+          <mat-label>Currency</mat-label>
+          <input matInput name="Currency"  PlaceHolder="Currency" formControlName="currency" >
+          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        </mat-form-field>
+    </p>
+    
+    <p>
+        <mat-form-field appearance="fill">
+          <mat-label>Price</mat-label>
+          <input matInput name="Price"  PlaceHolder="Price" formControlName="value">
+          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        </mat-form-field>
+    </p>
+</div>
+    <mat-slide-toggle name="Ispublished" formControlName="Ispublished"></mat-slide-toggle >
+    <br>
+    <button mat-raised-button color="primary" [disabled]="addBookForm.invalid" type="submit" >Save</button>
+</form>
+{{addBookForm.value |json }}

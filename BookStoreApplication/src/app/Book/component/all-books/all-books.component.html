@@ -1,4 +1,5 @@
 <p >counter={{(counter.counter)}}</p>
 <button (click)="incCount()">counter++</button>
 <button (click)="decCount()">counter--</button>
+<button mat-raised-button color="primary" routerLink="add-book">Add new Book</button>
 <app-book-card [allbooks]="books"></app-book-card>

@@ -7,12 +7,15 @@ import { BookDetailsComponent } from './component/book-details/book-details.comp
 import { HomeComponent } from '../Public-compnents/home/home.component';
 import { RecentBooksComponent } from './component/recent-books/recent-books.component';
 import { AddBooksComponent } from './component/add-books/add-books.component';
+import { AddBookReactiveComponent } from './component/add-book-reactive/add-book-reactive.component';
 
 const routes: Routes = [
-  { path: 'yup', component: AllBooksComponent },
+  { path: '', component: AllBooksComponent },
   { path: 'book-details/:id', component: BookDetailsComponent },
   { path: 'recent-book', component: RecentBooksComponent },
-  {path:'add-book',component:AddBooksComponent}
+  {path:'add-book',component:AddBooksComponent},
+  {path:'rec-book',component:AddBookReactiveComponent}
+
 
 ];
 

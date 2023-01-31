@@ -7,6 +7,7 @@ import { BookModel } from '../../models/book.model';
   styleUrls: ['./book-card.component.css']
 })
 export class BookCardComponent implements OnInit {
+  value:string='';
 
   @Input('allbooks')books:BookModel[]
   constructor(){}

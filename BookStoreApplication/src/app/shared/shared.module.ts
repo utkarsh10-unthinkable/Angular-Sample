@@ -8,7 +8,9 @@ import {MatButtonModule} from '@angular/material/button';
 import { FooterComponent } from './component/footer/footer.component';
 import { AuthorComponent } from './component/author/author.component';
 import { RouterModule } from '@angular/router';
-
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -23,8 +25,12 @@ import { RouterModule } from '@angular/router';
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
-    RouterModule
+    RouterModule,
+    MatFormFieldModule,
+    MatInputModule,
+    HttpClientModule
+    
   ],
-  exports:[ToolbarComponent,FooterComponent,AuthorComponent]
+  exports:[ToolbarComponent,FooterComponent,AuthorComponent,HttpClientModule]
 })
 export class SharedModule { }

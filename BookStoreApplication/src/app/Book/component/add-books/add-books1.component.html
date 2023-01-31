@@ -1,0 +1,39 @@
+<!--Angular form Design Template Drive using aangular materials-->
+{{myforms.valid}}
+{{myforms.invalid}}
+<form #myforms="ngForm" (ngSubmit)="saveBook(myforms.value)"> 
+    <p>
+        <mat-form-field appearance="fill">
+          <mat-label>Title</mat-label>
+          <input matInput name="Title"  PlaceHolder="Title" [(ngModel)]="model.title" required="" #title="ngModel">
+          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          <mat-hint [hidden]="title.valid"> Please Enter Title</mat-hint>
+        </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field appearance="fill">
+          <mat-label>Author</mat-label>
+          <input matInput name="Author"  PlaceHolder="Title" required="" ngModel>
+          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field appearance="fill">
+          <mat-label>Page</mat-label>
+          <input matInput name="Page"  PlaceHolder="Title" ngModel min="10" max="1000"
+          #nop="ngModel">
+          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          <mat-hint [hidden]="nop.valid">valid length is 10 to 1000</mat-hint>
+        </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field appearance="fill">
+          <mat-label>Price</mat-label>
+          <input matInput name="Price"  PlaceHolder="Title" ngModel>
+          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        </mat-form-field>
+    </p>
+    <mat-slide-toggle name="Ispublished" [(ngModel)]="model.Ispublished">Is book published</mat-slide-toggle>
+    <br>
+    <button mat-raised-button color="primary" [disabled]="myforms.invalid" type="submit" >Save</button>
+</form>
